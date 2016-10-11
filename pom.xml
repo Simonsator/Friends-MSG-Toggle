@@ -6,7 +6,7 @@
 
 	<groupId>de.simonsator</groupId>
 	<artifactId>Friends-MSG-Toggle</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<build>
 		<plugins>
 			<plugin>
