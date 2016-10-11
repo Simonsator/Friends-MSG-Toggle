@@ -27,7 +27,7 @@ public class PTConfig extends ConfigurationCreator {
 		set("Messages.Disabled",
 				"&7From now on you can write again normal into the chat");
 		set("Messages.Help",
-				"&8/&5friend list &8- &7Toggles if you msg directly to a friend");
+				"&8/&5friend toggle &8- &7Toggles if you msg directly to a friend");
 	}
 
 	@Override
