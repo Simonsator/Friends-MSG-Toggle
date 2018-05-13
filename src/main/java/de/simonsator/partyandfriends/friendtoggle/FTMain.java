@@ -1,9 +1,8 @@
 package de.simonsator.partyandfriends.friendtoggle;
 
+import de.simonsator.partyandfriends.api.PAFExtension;
 import de.simonsator.partyandfriends.friends.commands.Friends;
-import de.simonsator.partyandfriends.main.Main;
 import net.md_5.bungee.api.ProxyServer;
-import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.config.Configuration;
 
 import java.io.File;
@@ -13,13 +12,13 @@ import java.io.IOException;
  * @author Simonsator
  * @version 1.0.0 03.10.16
  */
-public class FTMain extends Plugin {
+public class FTMain extends PAFExtension {
 
 	@Override
 	public void onEnable() {
 		Configuration config = null;
 		try {
-			config = (new PTConfig(new File(getDataFolder(), "config.yml"))).getCreatedConfiguration();
+			config = (new PTConfig(new File(getDataFolder(), "config.yml"), this)).getCreatedConfiguration();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
