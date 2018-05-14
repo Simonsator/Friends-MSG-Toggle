@@ -18,7 +18,7 @@ public class FTMain extends PAFExtension {
 	public void onEnable() {
 		Configuration config = null;
 		try {
-			config = (new PTConfig(new File(getDataFolder(), "config.yml"), this)).getCreatedConfiguration();
+			config = (new PTConfig(new File(getConfigFolder(), "config.yml"), this)).getCreatedConfiguration();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -28,6 +28,7 @@ public class FTMain extends PAFExtension {
 		Friends.getInstance().addCommand(
 				new FriendToggle(config.getStringList("Names").toArray(new String[0]),
 						config.getInt("Priority"), config.getString("Messages.Help"), chatManager, config));
+	registerAsExtension();
 	}
 
 }
