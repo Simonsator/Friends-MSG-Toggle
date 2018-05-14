@@ -3,4 +3,4 @@ version: ${project.version}
 author: Simonsator
 depends: [PartyAndFriends]
 main: de.simonsator.partyandfriends.friendtoggle.FTMain
-description: An add-on for party and friends to add /friend acceptall and /friend denyall
+description: An add-on for party and friends which adds the command /friend toggle
